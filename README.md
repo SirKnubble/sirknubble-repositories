@@ -1,7 +1,3 @@
-# [SirKnubble´s Repository Collection](https://sirknubble.github.io/)
-
-
-
 ## ToDo:
 
 - Add new nav-bar to map

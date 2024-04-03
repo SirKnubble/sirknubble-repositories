@@ -4,11 +4,10 @@ ToDo:
 - Add more links to projects and stuff
 - Perfect nav-bar (collapsed, href on div not on text, spacing)
 
+<hr/>
 <br clear="both">
 
-<div align="center">
-  <img height="200" src="https://avatars.githubusercontent.com/u/102559031?v=4"  />
-</div>
+<img align="right" height="200" src="https://avatars.githubusercontent.com/u/102559031?v=4"  />
 
 ###
 
@@ -87,11 +86,3 @@ ToDo:
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" height="40" alt="vscode logo"  />
 </div>
-
-###
-
-<div align="center">
-  <img src="?theme=dark&spin=true&scan=true&rainbow=true" alt="Widget with the current Spotify song"  />
-</div>
-
-###

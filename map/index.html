@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head> <!-- Main -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="anonymous" />
+    <link href="/map/css/styles.css" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet" />
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="/map/icons/favicon.ico">
+    <title>SirKnubbles Repository - Map</title>
+  </head>
+
+    <body class="sb-nav-fixed"><!-- Sidebar -->
+      <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+          <!-- Navbar Brand-->
+          <a class="navbar-brand ps-3" href="/index.html">SirKnubbles Repository</a>
+          <!-- Sidebar Toggle-->
+          <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+      </nav>
+      <div id="layoutSidenav">
+          <div id="layoutSidenav_nav">
+              <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                  <div class="sb-sidenav-menu">
+                      <div class="nav">
+                          <div class="sb-sidenav-menu-heading">Tools</div>
+                          <a class="nav-link" href="/index.html"> <!-- nav-link=Linkfunc arg. "active"=current Website -->
+                              <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                              Home
+                          </a>
+                          <a class="nav-link active" href="#!">
+                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            GrandRP Map
+                        </a>
+                          <a class="nav-link" target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/playlist/1ahsi2EsGFoBi4s39nUjcW?si=219b6fc07a0b43d4">
+                              <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                              ghettö-playlist
+                          </a>
+                      </div>
+                      
+                      <div class="sb-sidenav-menu-heading">Sonstiges</div>
+                      <a class="nav-link" target="_blank" rel="noopener noreferrer" href="https://discord.com/">
+                          <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                          Discord
+                    </a>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseGesetzgebung" aria-expanded="false" aria-controls="pagesCollapseGesetzgebung">
+                      Placeholder
+                      <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                  </a>
+                  <div class="collapse" id="pagesCollapseGesetzgebung" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                      <nav class="sb-sidenav-menu-nested nav">
+                          <a class="nav-link" target="_blank" rel="noopener noreferrer" href="401.html">Öffentliches Gesetzbuch</a>
+                          <a class="nav-link" target="_blank" rel="noopener noreferrer" href="404.html">Beamten Dienst Gesetzbuch</a>
+                          <a class="nav-link" target="_blank" rel="noopener noreferrer" href="500.html">Straf & Bußgeldkatalog / Anwaltsregister</a>
+                      </nav>
+                  </div>
+              </nav>
+                  </div>
+                  <div class="sb-sidenav-footer">
+                      <div class="small"><a href= "https://gta5grand.com/forum/members/90152/">GrandRP | DE01</a></div>
+                      Daniel Ritchet | 134233
+                  </div>
+              </nav>
+          </div>
+        </div>
+        <script src="/js/scripts.js"></script>
+      </body>
+    
+  
+<head> <!-- Map -->
+</head>
+
+<body style="background-color:#0fa8d2" body oncontextmenu="return false"> <!-- Map-Functions, Controls, Markers, Layers -->
+  <div id="map" style="width: 100%; height: 100%;background-color:#0fa8d2;">
+  </div>
+  <script>
+    //Initialize  Leaflet map
+    var map = L.map('map', {
+      crs: L.CRS.Simple,
+      minZoom: -3,
+      maxBoundsViscosity: 1.0
+    });
+    var bounds = [
+      [0, 0],
+      [8192, 8192]
+    ];
+    map.attributionControl.addAttribution('GTA V &copy; <a href= "https://www.rockstargames.com/">Rockstar Games</a> | GrandRP &copy; <a href= "https://gta5grand.com/">GrandRP</a> | Icons &copy<a href= "https://flaticon.com"> flaticon</a>');
+    //Initialize each base layer
+    var atlas = L.imageOverlay('images/gtav.png', bounds).addTo(map);
+    var satellite = L.imageOverlay('images/GTAV_SATELLITE_8192x8192.png', bounds)
+    var road = L.imageOverlay('images/GTAV_ROADMAP_8192x8192.png', bounds)
+    map.fitBounds(bounds);
+    map.setMaxBounds(bounds)
+
+    // Load each layer from it's corresponding GeoJSON file
+    var treasure = L.geoJson(null, {
+      pointToLayer: function(feature, latlng) {
+        //Create icon for marker
+        var icn = L.icon({
+          iconUrl: 'icons/treasure.png',
+          iconSize: [35, 35], // size of the icon
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("geojson/treasure.json", function(data) {
+      treasure.addData(data).addTo(map); // WICHTIG !!! .addTo(map), um des beim Start standardmäßig zu aktivieren.
+    });
+
+    var ammunation = L.geoJson(null, {
+      pointToLayer: function(feature, latlng) {
+        //Create icon for marker
+        var icn = L.icon({
+          iconUrl: 'icons/ammunation.png',
+          iconSize: [48, 48], // size of the icon
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("geojson/Ammu-Nation.json", function(data) {
+      ammunation.addData(data);
+    });
+
+    var barbershop = L.geoJson(null, {
+      pointToLayer: function(feature, latlng) {
+        //Create icon for marker
+        var icn = L.icon({
+          iconUrl: 'icons/barbershop.png',
+          iconSize: [48, 48],
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("geojson/Barber Shop.json", function(data) {
+      barbershop.addData(data);
+    });
+
+    var repair = L.geoJson(null, {
+      pointToLayer: function(feature, latlng) {
+        //Create icon for marker
+        var icn = L.icon({
+          iconUrl: 'icons/repairshop.png',
+          iconSize: [48, 48],
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("geojson/Repair Shop.json", function(data) {
+      repair.addData(data);
+    });
+
+    var clothing = L.geoJson(null, {
+      pointToLayer: function(feature, latlng) {
+        //Create icon for marker
+        var icn = L.icon({
+          iconUrl: 'icons/clothingstore.png',
+          iconSize: [48, 48],
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("geojson/Clothing Stores.json", function(data) {
+      clothing.addData(data);
+    });
+
+    var carwash = L.geoJson(null, {
+      pointToLayer: function(feature, latlng) {
+        //Create icon for marker
+        var icn = L.icon({
+          iconUrl: 'icons/carwash.png',
+          iconSize: [48, 48],
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("geojson/Car Wash.json", function(data) {
+      carwash.addData(data);
+    });
+
+    var tattooparlor = L.geoJson(null, {
+      pointToLayer: function(feature, latlng) {
+        //Create icon for marker
+        var icn = L.icon({
+          iconUrl: 'icons/tattooparlor.png',
+          iconSize: [48, 48],
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("geojson/Tattoo Parlor.json", function(data) {
+      tattooparlor.addData(data);
+    });
+
+    var sprayspots = L.geoJson(null, {
+      pointToLayer: function(feature, latlng) {
+        //Create icon for marker
+        var icn = L.icon({
+          iconUrl: 'icons/chiptuner.png',
+          iconSize: [35, 35], // size of the icon
+        });
+        var marker = L.marker(latlng, {
+          icon: icn
+        });
+        marker.bindPopup("<font color=white><h4>" + feature.properties.name + '</h4>' + "<img src='" + feature.properties.imgname + "' class='popupImage'></font>");
+        return marker;
+      }
+    })
+    $.getJSON("geojson/Spray Spots.json", function(data) {
+      sprayspots.addData(data).addTo(map); // WICHTIG !!! .addTo(map), um des beim Start standardmäßig zu aktivieren.
+    });
+
+    //Create titles for each layer with mini icons to add to the Control
+    var overlay = {
+      "<img src='icons/treasure.png'align='center'width='30' height='30' /> Schätze": treasure,
+      "<img src='icons/ammunation.png'align='center'width='30' height='30' /> Ammu-Nation": ammunation,
+      "<img src='icons/barbershop.png'align='center'width='30' height='30'/> Frisuren": barbershop,
+      "<img src='icons/repairshop.png'align='center'width='30' height='30'/> Tuner": repair,
+      "<img src='icons/clothingstore.png'align='center'width='30' height='30'/> Kleidung": clothing,
+      "<img src='icons/carwash.png'align='center'width='30' height='30'/> Waschanlagen": carwash,
+      "<img src='icons/tattooparlor.png'align='center'width='30' height='30'/> Tattoos": tattooparlor,
+      "<img src='icons/chiptuner.png'align='center'width='30' height='30'/> Spray-Spots": sprayspots,
+    };
+
+    //Create titles for each baselayer to add to the Control
+    var baseLayers = {
+      "Atlas": atlas,
+      "Road": road,
+      "Satellit": satellite
+
+    }
+    //Create Control layer and add to map
+    var over = L.control.layers(baseLayers, overlay, {
+      collapsed: false,
+      sortLayers: true
+    }).addTo(map);
+
+    //Add GTAV logo to lower left hand corner
+    L.Control.Watermark = L.Control.extend({
+      onAdd: function(map) {
+
+        var img = L.DomUtil.create('img', 'gtav');
+        img.src = 'images/logo.png';
+        img.style.width = '200px';
+        return img;
+      }
+    });
+    L.control.watermark = function(opts) {
+      return new L.Control.Watermark(opts);
+    }
+    //Add logo to map
+    L.control.watermark({
+      position: 'bottomleft'
+    }).addTo(map);
+
+
+    //When the map's base layer is changed, change the color of the background
+    //to match the map
+    map.on('baselayerchange', function(layer) {
+      if (layer.name == "Road") {
+        document.getElementById("map").style.background = "#1862ad";
+      }
+      if (layer.name == "Satellite") {
+        document.getElementById("map").style.background = "#143D6B";
+      }
+      if (layer.name == "Atlas") {
+        document.getElementById("map").style.background = "#0fa8d2";
+      }
+    });
+  </script>
+</body>
+
+</html>

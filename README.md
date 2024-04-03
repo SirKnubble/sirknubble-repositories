@@ -5,7 +5,7 @@
 - Perfect nav-bar (collapsed, href on div not on text, spacing)
 - Configure map icons (types and sizes)
 - Add *body oncontextmenu="return false"* to home
-- Home-Background color gradient?
+- Home-Background color gradient?*
 
 Projects to add:
 - Discord - Bot

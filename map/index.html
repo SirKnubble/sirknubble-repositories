@@ -31,7 +31,7 @@
       [0, 0],
       [8192, 8192]
     ];
-    map.attributionControl.addAttribution('GTA V &copy; <a href= "https://www.rockstargames.com/">Rockstar Games</a> | GrandRP &copy; <a href= "https://gta5grand.com/">GrandRP</a> | Icons &copy<a href= "https://flaticon.com"> flaticon</a>');
+    map.attributionControl.addAttribution('GTA V &copy; <a href= "https://www.rockstargames.com/">Rockstar Games</a> | Icons &copy<a href= "https://flaticon.com"> flaticon</a>');
     //Initialize each base layer
     var atlas = L.imageOverlay('images/gtav.png', bounds).addTo(map);
     var satellite = L.imageOverlay('images/GTAV_SATELLITE_8192x8192.png', bounds)
@@ -200,7 +200,7 @@
     var baseLayers = {
       "Atlas": atlas,
       "Road": road,
-      "Satellit": satellite
+      "Satellite": satellite
 
     }
     //Create Control layer and add to map
@@ -209,25 +209,6 @@
       sortLayers: true
     }).addTo(map);
 
-    //Add GTAV logo to lower left hand corner
-    L.Control.Watermark = L.Control.extend({
-      onAdd: function(map) {
-
-        var img = L.DomUtil.create('img', 'gtav');
-        img.src = 'images/logo.png';
-        img.style.width = '200px';
-        return img;
-      }
-    });
-    L.control.watermark = function(opts) {
-      return new L.Control.Watermark(opts);
-    }
-    //Add logo to map
-    L.control.watermark({
-      position: 'bottomleft'
-    }).addTo(map);
-
-
     //When the map's base layer is changed, change the color of the background
     //to match the map
     map.on('baselayerchange', function(layer) {
@@ -235,7 +216,7 @@
         document.getElementById("map").style.background = "#1862ad";
       }
       if (layer.name == "Satellite") {
-        document.getElementById("map").style.background = "#143D6B";
+        document.getElementById("map").style.background = "#143d6b";
       }
       if (layer.name == "Atlas") {
         document.getElementById("map").style.background = "#0fa8d2";

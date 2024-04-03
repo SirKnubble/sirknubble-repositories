@@ -5,7 +5,7 @@
 .leaflet-control-layers-expanded {
   background-color: #2da0e2;
   background-size: 100%;
-  background-image: url("/images/x.png");
+  background-image: url("/map/images/x.png");
   transition-property: opacity;
   transition-duration: 1s;
   opacity: 70%;

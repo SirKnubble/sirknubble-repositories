@@ -7,8 +7,8 @@
   background-size: 100%;
   background-image: url("/map/images/x.png");
   transition-property: opacity;
-  transition-duration: 1s;
-  opacity: 70%;
+  transition-duration: 0.5s;
+  opacity: 50%;
 }
 
 .leaflet-control-layers-expanded:hover {
@@ -33,7 +33,7 @@
 }
 
 .popupImage:hover {
-  transform: scale(5);
+  transform: scale(7);
   opacity: 1 !important;
   border-style: solid;
   border-color: gray;

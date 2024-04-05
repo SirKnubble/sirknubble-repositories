@@ -11,6 +11,7 @@ Projects to add:
 - Discord - Bot
 - Minecraft - Server stuff and Datapacks, etc.
 - Gallery-Version of GTAV - Map
+- Website Status (Online)
 
 <hr/>
 <br clear="both">

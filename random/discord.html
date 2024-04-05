@@ -2,6 +2,8 @@
 <html lang='en'>
 <head>
 	<title>Redirecting...</title>
+	<link href="/home/css/styles.css" rel="stylesheet" />
+	<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <link rel="icon" href="/css/cat.png">
     <script type="text/javascript">
 
@@ -62,11 +64,33 @@
 	//		}
 	//		return "";
 	//	}
-
-    document.write("Work in progress, come back later.");
 	</script>
 
 </head>
 <body>
+	<p style="text-align: center; font-size: 50px;">Work in progress, come back later.</p>
+  <div id="nav-bar"> <!-- start nav-bar -->
+    <input id="nav-toggle" type="checkbox"/>
+    <div id="nav-header"><a id="nav-title" href="/home/">SirKnubble´s Repository</a>
+      <label for="nav-toggle"><span id="nav-toggle-burger"></span></label>
+      <hr/>
+    </div>
+    <div id="nav-content"> <!-- general -->
+      <div class="nav-button"><i class="fa-solid fa-house"></i><a href="/home/"><span>&nbsp;Home</span></a></div>
+      <div class="nav-button"><i class="fa-brands fa-spotify"></i><a href="/random/spotify.html" target="_blank"><span>&nbsp;Random Spotify - Playlist</span></a></div>
+      <div class="nav-button"><i class="fa-brands fa-discord"></i><a href="#!"><span>&nbsp;Random Discord - Server</span></a></div>
+      <hr/> <!-- projects -->
+      <div class="nav-button"><i class="fa-solid fa-map"></i><a href="/map/"><span>&nbsp;GTAV - Map</span></a></div>
+      <div class="nav-button"><i class="fa-solid fa-signal"></i><a href="/home/status.html"><span>&nbsp;Website Status</span></a></div>
+      <hr/>
+      <div class="nav-button"><i class="fa-solid fa-spinner"></i><a href="#!"><span>&nbsp;Coming Soon...</span></a></div>
+      <div id="nav-content-highlight"></div>
+    </div>
+    <div id="nav-footer">
+      <div id="nav-footer-heading">
+        <div id="nav-footer-avatar"><img src=https://avatars.githubusercontent.com/u/102559031?v/></div>
+        <div id="nav-footer-titlebox"><a id="nav-footer-title" href="https://github.com/sirknubble" target="_blank">SirKnubble</a><span id="nav-footer-subtitle">@GitHub</span></div>
+    </div>
+  </div> <!-- end nav-bar -->
 </body>
 </html>

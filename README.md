@@ -57,14 +57,11 @@ sirknubble.github.io
 Projects to add:
 - Discord - Bot
 - Server stuff, SQL, FTP, Console
-- README.MD
 
 <hr/>
 <br clear="both">
 
 <img align="right" height="200" src="https://avatars.githubusercontent.com/u/102559031?v=4"  />
-
-###
 
 <div align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aarch64/aarch64-original.svg" height="40" alt="aarch64 logo"  />

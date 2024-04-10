@@ -1,11 +1,61 @@
+# Structure
+
+```bash
+sirknubble.github.io
+│   /.gitattributes
+│   /README.md
+│
+├───/home
+│   │   /index.html
+│   │   /status.html
+│   │
+│   ├───/css
+│   │       /cat.png
+│   │       /styles.css
+│   │
+│   └───/js
+│           /scripts.js
+│
+├───/map
+│   │   /gallery.html
+│   │   /index.html
+│   │
+│   ├───/css
+│   │       /styles.css
+│   │
+│   ├───/geojson
+│   │
+│   ├───/icons
+│   │
+│   └───/images
+│       │
+│       ├───/ammunation
+│       │
+│       └───/treasure
+│
+├───/node_modules
+│   └───blueimp-gallery
+│       │   /LICENSE.txt
+│       │
+│       ├───/css
+│       │
+│       ├───/img
+│       │
+│       └───/js
+│
+└───/random
+        /discord.html
+        /spotify.html
+```
 ## ToDo:
 
 - Add ~~new nav-bar~~ "back"&"gallery"-button to map 
-- Add more links to projects and stuff
+- Work in map/gallery, buttons in home-nav-bar style (on top of hr/)
 
 Projects to add:
 - Discord - Bot
-- Minecraft - Server stuff and Datapacks, etc.
+- Server stuff, SQL, FTP, Console
+- README.MD
 
 <hr/>
 <br clear="both">

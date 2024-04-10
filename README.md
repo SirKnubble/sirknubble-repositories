@@ -19,6 +19,7 @@ sirknubble.github.io
 ├───/map
 │   │   /gallery.html
 │   │   /index.html
+│   │   /script.py
 │   │
 │   ├───/css
 │   │       /styles.css
@@ -50,7 +51,8 @@ sirknubble.github.io
 ## ToDo:
 
 - Add ~~new nav-bar~~ "back"&"gallery"-button to map 
-- Work in map/gallery, buttons in home-nav-bar style (on top of hr/)
+- Work on map/gallery, buttons in home-nav-bar style (on top of hr/)
+- gallery working on localhost, not on github
 
 Projects to add:
 - Discord - Bot

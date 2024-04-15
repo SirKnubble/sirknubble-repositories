@@ -1,3 +1,4 @@
+[![pages-build-deployment](https://github.com/SirKnubble/sirknubble.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/SirKnubble/sirknubble.github.io/actions/workflows/pages/pages-build-deployment)
 # Structure
 
 ```bash

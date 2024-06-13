@@ -13,8 +13,48 @@
 <!--  Nav-Bar end -->
 <div class="nav-button"><i class="fa-solid fa-map"></i><a href="/map/"><span>&nbsp;Map</span></a></div>
   <hr/>
+  <!-- The Gallery as lightbox dialog, should be a document body child element -->
+<div
+id="blueimp-gallery"
+class="blueimp-gallery blueimp-gallery-controls blueimp-gallery-contain"
+aria-label="image gallery"
+aria-modal="true"
+role="dialog"
+>
+<div class="slides" aria-live="polite"></div>
+<h3 class="title"></h3>
+<a
+  class="prev"
+  aria-controls="blueimp-gallery"
+  aria-label="previous slide"
+  aria-keyshortcuts="ArrowLeft"
+></a>
+<a
+  class="next"
+  aria-controls="blueimp-gallery"
+  aria-label="next slide"
+  aria-keyshortcuts="ArrowRight"
+></a>
+<a
+  class="close"
+  aria-controls="blueimp-gallery"
+  aria-label="close"
+  aria-keyshortcuts="Escape"
+></a>
+<a
+  class="play-pause"
+  aria-controls="blueimp-gallery"
+  aria-label="play slideshow"
+  aria-keyshortcuts="Space"
+  aria-pressed="false"
+  role="button"
+></a>
+<ol class="indicator"></ol>
+</div>
   <div id="links"> <!-- Script for generating at https://sirknubble.github.io/map/script.py-->
-    <a href="/map/images/treasure/treasure1.jpg" title="Treasure 1" data-gallery><img src="/map/icons/treasure.png" alt="Treasure 1" /></a>
+    <a href="/map/images/treasure/treasure1.jpg" title="Treasure 1" data-gallery>
+      <img src="/map/icons/treasure.png" alt="Treasure 1" />
+    </a>
     <a href="/map/images/treasure/treasure2.jpg" title="Treasure 2" data-gallery><img src="/map/icons/treasure.png" alt="Treasure 2" /></a>
     <a href="/map/images/treasure/treasure3.jpg" title="Treasure 3" data-gallery><img src="/map/icons/treasure.png" alt="Treasure 3" /></a>
     <a href="/map/images/treasure/treasure4.jpg" title="Treasure 4" data-gallery><img src="/map/icons/treasure.png" alt="Treasure 4" /></a>
@@ -311,43 +351,6 @@
     <a href="/map/images/treasure/treasure295.jpg" title="Treasure 295" data-gallery><img src="/map/icons/treasure.png" alt="Treasure 295" /></a>
     <a href="/map/images/treasure/treasure296.jpg" title="Treasure 296" data-gallery><img src="/map/icons/treasure.png" alt="Treasure 296" /></a>
   </div>
-  <div
-  id="blueimp-gallery"
-  class="blueimp-gallery"
-  aria-label="image gallery"
-  aria-modal="true"
-  role="dialog"
->
-  <div class="slides" aria-live="polite"></div>
-  <h3 class="title"></h3>
-  <a
-    class="prev"
-    aria-controls="blueimp-gallery"
-    aria-label="previous slide"
-    aria-keyshortcuts="ArrowLeft"
-  ></a>
-  <a
-    class="next"
-    aria-controls="blueimp-gallery"
-    aria-label="next slide"
-    aria-keyshortcuts="ArrowRight"
-  ></a>
-  <a
-    class="close"
-    aria-controls="blueimp-gallery"
-    aria-label="close"
-    aria-keyshortcuts="Escape"
-  ></a>
-  <a
-    class="play-pause"
-    aria-controls="blueimp-gallery"
-    aria-label="play slideshow"
-    aria-keyshortcuts="Space"
-    aria-pressed="false"
-    role="button"
-  ></a>
-  <ol class="indicator"></ol>
-</div>
 <script src="/node_modules/blueimp-gallery/js/blueimp-gallery.min.js"></script>
 <script>
   document.getElementById('links').onclick = function (event) {

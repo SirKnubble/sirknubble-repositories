@@ -3,51 +3,33 @@
 
 ```bash
 sirknubble.github.io
-│   /.gitattributes
-│   /README.md
-│
-├───/home
-│   │   /index.html
-│   │   /status.html
-│   │
-│   ├───/css
-│   │       /cat.png
-│   │       /styles.css
-│   │
-│   └───/js
-│           /scripts.js
-│
-├───/map
-│   │   /gallery.html
-│   │   /index.html
-│   │   /script.py
-│   │
-│   ├───/css
-│   │       /styles.css
-│   │
-│   ├───/geojson
-│   │
-│   ├───/icons
-│   │
-│   └───/images
-│       │
-│       ├───/ammunation
-│       │
-│       └───/treasure
-│
-├───/node_modules
-│   └───blueimp-gallery
-│       │   /LICENSE.txt
-│       │
-│       ├───/css
-│       │
-│       ├───/img
-│       │
-│       └───/js
-│
-└───/random
-        /discord.html
-        /spotify.html
+|
++---home
+|   |
+|   +---css
+|   |
+|   \---js
+|
++---map
+|   |
+|   +---css
+|   |
+|   +---geojson
+|   |
+|   +---icons
+|   |
+|   \---images
+|       |
+|       +---ammunation
+|       |
+|       \---treasure
+|
++---node_modules
+|   \---blueimp-gallery
+|
+\---random
+        discord.html
+        spotify.html
 ```
 ## ToDo:
 

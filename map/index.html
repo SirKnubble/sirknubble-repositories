@@ -8,10 +8,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <link rel="icon" href="/map/icons/favicon.ico">
+    <link rel="stylesheet" href="/map/css/styles.css">
     <title>SirKnubbles Repository - Map</title>
   </head>
 
-<body body oncontextmenu="return false"> <!-- Map-Functions, Controls, Markers, Layers -->
+<body body oncontextmenu="return false" style="
+    background-image: url(/home/css/cat.png);
+    background-size: 50px;
+    background-color:#0fa8d2;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top right;"> <!-- Map-Functions, Controls, Markers, Layers -->
+  <div class="gallery-button"><i class="fa-solid fa-images"></i><a href="https://gallery.sirknubble.de/" style="color:white">&nbspGallery</a></div>
   <div id="map" style="width: 100%; height: 100%;background-color:#0fa8d2;">
   </div>
   <script>
@@ -25,7 +33,7 @@
       [0, 0],
       [8192, 8192]
     ];
-    map.attributionControl.addAttribution('Original &copy; <a href= "https://github.com/jgardner117">Jesse Gardner</a> | All images @ <a href= "gallery.html">Gallery</a>');
+    map.attributionControl.addAttribution('Original &copy; <a href= "https://github.com/jgardner117">Jesse Gardner</a>');
     //Initialize each base layer
     var atlas = L.imageOverlay('images/gtav.png', bounds).addTo(map);
     var satellite = L.imageOverlay('images/GTAV_SATELLITE_8192x8192.png', bounds)
@@ -38,7 +46,7 @@
       pointToLayer: function(feature, latlng) {
         //Create icon for marker
         var icn = L.icon({
-          iconUrl: 'icons/treasure.png',
+          iconUrl: 'icons/schatz.png',
           iconSize: [40, 40], // size of the icon
         });
         var marker = L.marker(latlng, {

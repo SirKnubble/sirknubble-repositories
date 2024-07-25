@@ -12,14 +12,7 @@
     <title>SirKnubbles Repository - Map</title>
   </head>
 
-<body body oncontextmenu="return false" style="
-    background-image: url(/home/css/cat.png);
-    background-size: 50px;
-    background-color:#0fa8d2;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: top right;"> <!-- Map-Functions, Controls, Markers, Layers -->
-  <div class="gallery-button"><i class="fa-solid fa-images"></i><a href="https://gallery.sirknubble.de/" style="color:white">&nbspGallery</a></div>
+<body oncontextmenu="return false"> <!-- Map-Functions, Controls, Markers, Layers -->
   <div id="map" style="width: 100%; height: 100%;background-color:#0fa8d2;">
   </div>
   <script>
@@ -33,7 +26,7 @@
       [0, 0],
       [8192, 8192]
     ];
-    map.attributionControl.addAttribution('Original &copy; <a href= "https://github.com/jgardner117">Jesse Gardner</a>');
+    map.attributionControl.addAttribution('Original &copy; <a href= "https://github.com/jgardner117">Jesse Gardner</a> | <a href="gallery.html">Gallery</a>');
     //Initialize each base layer
     var atlas = L.imageOverlay('images/gtav.png', bounds).addTo(map);
     var satellite = L.imageOverlay('images/GTAV_SATELLITE_8192x8192.png', bounds)
@@ -172,7 +165,7 @@
       pointToLayer: function(feature, latlng) {
         //Create icon for marker
         var icn = L.icon({
-          iconUrl: 'icons/chiptuner.png',
+          iconUrl: 'icons/icon_glokon_normal_32x32.png',
           iconSize: [35, 35], // size of the icon
         });
         var marker = L.marker(latlng, {
@@ -188,14 +181,15 @@
 
     //Create titles for each layer with mini icons to add to the Control
     var overlay = {
-      "<img src='icons/treasure.png'align='center'width='30' height='30' /> Treasures": treasure,
+      "<img src='icons/schatz.png'align='center'width='30' height='30' /> Treasures": treasure,
       "<img src='icons/ammunation.png'align='center'width='30' height='30' /> Ammunation": ammunation,
       "<img src='icons/barbershop.png'align='center'width='30' height='30'/> Barbershop": barbershop,
       "<img src='icons/repairshop.png'align='center'width='30' height='30'/> Tuner": repair,
       "<img src='icons/clothingstore.png'align='center'width='30' height='30'/> Clothing": clothing,
       "<img src='icons/carwash.png'align='center'width='30' height='30'/> Carwash": carwash,
       "<img src='icons/tattooparlor.png'align='center'width='30' height='30'/> Tattoos": tattooparlor,
-  //    "<img src='icons/chiptuner.png'align='center'width='30' height='30'/> Soon...": sprayspots,
+      "<img src='icons/icon_glokon_normal_32x32.png'align='center'width='30' height='30'/> Soon...": sprayspots,
+      
     };
 
     //Create titles for each baselayer to add to the Control

@@ -3,7 +3,7 @@
   <head> <!-- Main -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="anonymous" />
     <link href="/map/css/styles.css" rel="stylesheet" />
-<!--<link href="/home/css/styles.css" rel="stylesheet" /> -->
+    <link href="/home/css/styles.css" rel="stylesheet" />
     <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -13,6 +13,12 @@
   </head>
 
 <body oncontextmenu="return false"> <!-- Map-Functions, Controls, Markers, Layers -->
+  <div id="nav-bar"> <!-- start nav-bar -->
+    <div id="nav-header" style="position:relative; top: 80%; left: 0; width: 120px">&nbsp<i class="fa-solid fa-images"></i><a id="nav-title" href="/map/gallery.html">&nbsp;Gallery</a></div>
+  </div>
+  <div id="nav-bar"> <!-- start nav-bar -->
+    <div id="nav-header" style="position:relative; top: 90%; left: 0; width: 110px;">&nbsp<i class="fa-solid fa-house"></i><a id="nav-title" href="/home/">&nbsp;Home</a></div>
+  </div>
   <div id="map" style="width: 100%; height: 100%;background-color:#0fa8d2;">
   </div>
   <script>
@@ -26,7 +32,7 @@
       [0, 0],
       [8192, 8192]
     ];
-    map.attributionControl.addAttribution('Original &copy; <a href= "https://github.com/jgardner117">Jesse Gardner</a> | <a href="gallery.html">Gallery</a>');
+    map.attributionControl.addAttribution('Original &copy; <a href= "https://github.com/jgardner117">Jesse Gardner</a> | GTA V &copy; <a href= "www.rockstargames.com">Rockstar Games</a>| Icons &copy<a href="https://fontawesome.com/"> Fontawesome</a>');
     //Initialize each base layer
     var atlas = L.imageOverlay('images/gtav.png', bounds).addTo(map);
     var satellite = L.imageOverlay('images/GTAV_SATELLITE_8192x8192.png', bounds)
@@ -165,7 +171,7 @@
       pointToLayer: function(feature, latlng) {
         //Create icon for marker
         var icn = L.icon({
-          iconUrl: 'icons/icon_glokon_normal_32x32.png',
+          iconUrl: 'icons/spray-can-sparkles-solid.svg',
           iconSize: [35, 35], // size of the icon
         });
         var marker = L.marker(latlng, {
@@ -181,14 +187,8 @@
 
     //Create titles for each layer with mini icons to add to the Control
     var overlay = {
-      "<img src='icons/schatz.png'align='center'width='30' height='30' /> Treasures": treasure,
-      "<img src='icons/ammunation.png'align='center'width='30' height='30' /> Ammunation": ammunation,
-      "<img src='icons/barbershop.png'align='center'width='30' height='30'/> Barbershop": barbershop,
-      "<img src='icons/repairshop.png'align='center'width='30' height='30'/> Tuner": repair,
-      "<img src='icons/clothingstore.png'align='center'width='30' height='30'/> Clothing": clothing,
-      "<img src='icons/carwash.png'align='center'width='30' height='30'/> Carwash": carwash,
-      "<img src='icons/tattooparlor.png'align='center'width='30' height='30'/> Tattoos": tattooparlor,
-      "<img src='icons/icon_glokon_normal_32x32.png'align='center'width='30' height='30'/> Soon...": sprayspots,
+      "<img src='icons/schatz.png' align='center' width='30' height='30' /> Treasures": treasure,
+      "<img src='icons/spray-can-sparkles-solid.svg' align='center' width='30' height='30'/> Soon...": sprayspots,
       
     };
 

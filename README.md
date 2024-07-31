@@ -1,5 +1,8 @@
+# <a href="https://www.sirknubble.de/home/">Homepage</a>
+
+## Status:
 [![pages-build-deployment](https://github.com/SirKnubble/sirknubble.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/SirKnubble/sirknubble.github.io/actions/workflows/pages/pages-build-deployment)
-# Structure
+## Structure
 
 ```bash
 sirknubble.github.io
@@ -20,8 +23,6 @@ sirknubble.github.io
 |   |
 |   \---images
 |       |
-|       +---ammunation
-|       |
 |       \---treasure
 |
 +---node_modules
@@ -31,15 +32,12 @@ sirknubble.github.io
         discord.html
         spotify.html
 ```
-## ToDo:
+### ToDo:
 
-- Add ~~new nav-bar~~ "back"&"gallery"-button to map 
-- Work on map/gallery, buttons in home-nav-bar style (on top of hr/)
-- gallery working on localhost, not on github
+- Configure Map & Gallery Buttons,
+- Fix Gallery Script,
+- Make Nav-Bar Icons clickable, not just the Text.
 
-Projects to add:
-- Discord - Bot
-- Server stuff, SQL, FTP, Console
 
 <hr/>
 <br clear="both">

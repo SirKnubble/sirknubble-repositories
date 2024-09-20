@@ -1,5 +1,5 @@
   body {
-    background-image: url(/home/css/cat.png);
+    background-image: url(cat.png);
     background-color:#9c88ff;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -272,6 +272,7 @@
     flex-direction: column;
     z-index: 2;
     transition: width 0.2s, height 0.2s;
+    cursor: pointer;
   }
   
   #nav-footer-heading {
@@ -309,4 +310,11 @@
   #nav-footer-subtitle {
     color: var(--navbar-light-secondary);
     font-size: 0.6rem;
+  }
+
+  i {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
   }

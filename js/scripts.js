@@ -1,4 +1,4 @@
-/* Currently out of order...
+/* out of order
 
 window.addEventListener('DOMContentLoaded', event => {
 

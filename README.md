@@ -1,4 +1,4 @@
-# <a href="https://www.sirknubble.de/home/">Homepage</a>
+# <a href="https://www.sirknubble.de/">Homepage</a>
 
 ## Status:
 [![pages-build-deployment](https://github.com/SirKnubble/sirknubble.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/SirKnubble/sirknubble.github.io/actions/workflows/pages/pages-build-deployment)
@@ -7,11 +7,9 @@
 ```bash
 sirknubble.github.io
 |
-+---home
-|   |
-|   +---css
-|   |
-|   \---js
++---css
+|
++---js
 |
 +---map
 |   |
@@ -29,14 +27,12 @@ sirknubble.github.io
 |   \---blueimp-gallery
 |
 \---random
-        discord.html
-        spotify.html
+
 ```
 ### ToDo:
 
-- Configure Map & Gallery Buttons,
-- Fix Gallery Script,
-- Make Nav-Bar Icons clickable, not just the Text.
+- Configure Map & Gallery Buttons
+- Fix Gallery Script
 
 
 <hr/>

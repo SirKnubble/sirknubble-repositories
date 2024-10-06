@@ -19,6 +19,7 @@
   width: 59px;
   height: 56px;
   box-sizing: content-box;
+  -webkit-user-drag: none;
 }
 .navbar-nav-content {
   gap: var(--dl-space-space-threeunits);

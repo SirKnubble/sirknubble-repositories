@@ -25,14 +25,16 @@ def quicksort(L, anfang, ende):
     return L
 
 # Test
-if mode == "1":
-    L = list(word)
-elif mode == "2":
-    L = list(word.lower())
-elif mode == "3":
-    L = list(word.upper())
-else:
-    print("Invalid input!")
+match mode:
+    case "1":
+        L = list(word)
+    case "2":
+        L = list(word.lower())
+    case "3":
+        L = list(word.upper())
+    case _:
+        print("Invalid Input")
+        quit()
              
 anzahl = len(L)
 print("~ Quicksort-Algorithmus ~\n")

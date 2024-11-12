@@ -43,6 +43,7 @@ def bubblesort(L):
         ende = ende - 1
     return L
 
+# QuickSort
 def quicksort(L):
     if L != []:
         pivot = L[0]
@@ -71,7 +72,7 @@ while anzahl <= 10000:
         L = L + [randint(1, 10*anzahl)]
 
     # Bestimmung der Rechenzeit beim Sortieren
-    t1 = process_time() # früher: clock()
+    t1 = process_time()
     match mode:
         case "1":
             L_sortiert = selectionsort(L)
@@ -97,11 +98,11 @@ while anzahl <= 10000:
             print("Invalid Input")
             break 
 
-    t2 = process_time() # früher: clock()
+    t2 = process_time()
     t = t2 - t1
 
     # Ausgabe des Messergebnisses
-    print("Anzahl der Listenelemente: ", '{0:5}'.format(anzahl), " |  Rechenzeit: ", t)
+    print("Anzahl der Listenelemente: ", '{0:5}'.format(anzahl), " |  Rechenzeit: ", '{0:.3f}'.format(t), " | Operationen: tbc")
 
     # Erhoehung der Anzahl der Listenelemente
     anzahl = anzahl + 1000

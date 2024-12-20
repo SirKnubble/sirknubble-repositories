@@ -78,7 +78,6 @@
 }
 .navbar-image {
   width: 100px;
-  filter: brightness(0) saturate(100%);
   object-fit: cover;
 }
 .navbar-container1 {
@@ -86,6 +85,9 @@
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
+  font-family: 'PressStart2P-Regular';
+  color: white;
+  cursor: pointer;
 }
 .navbar-icon31 {
   width: 24px;

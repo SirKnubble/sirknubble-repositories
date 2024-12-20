@@ -3,7 +3,7 @@
   font-style: normal;
   font-format: truetype;
   font-weight: 400;
-  src: url("css/fonts/pressstart2p-regular.ttf") ;
+  src: url("css/assets/fonts/pressstart2p-regular.ttf") ;
 }
 :root {
   --dl-color-gray-500: #595959;
@@ -87,7 +87,7 @@
   font-style: Medium;
   text-align: left;
   transition: 0.3s;
-  font-family: Poppins;
+  font-family: PressStart2P-Regular;
   font-weight: 500;
   line-height: normal;
   font-stretch: normal;

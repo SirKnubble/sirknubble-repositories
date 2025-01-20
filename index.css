@@ -488,3 +488,21 @@
     height: 31px;
   }
 }
+
+.cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #eee;
+  left: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width 1000ms, height 1000ms;
+  z-index: 9999;
+}
+
+.cursor.large {
+  height: 50px;
+  width: 50px;
+}

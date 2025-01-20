@@ -29,7 +29,7 @@ sirknubble.github.io
 ```
 ### ToDo:
 
-- Configure Map & Gallery Buttons
+- Config Cursor Circle Zoom :hover
 - Fix Gallery Script
 
 

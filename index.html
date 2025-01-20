@@ -4,10 +4,10 @@
     <title>Home - SirKnubble´s Repositories</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
-    <link rel="icon" href="css/cat.png">
+    <link rel="icon" href="css/assets/images/cat.png">
     <style data-tag="reset-style-sheet">
       html {line-height: 1.15;}
-      body {margin: 0;}
+      body {margin: 0; cursor: url('/css/assets/images/cursor.png'), auto;}
       * {box-sizing: border-box; border-width: 0; border-style: solid;}
       p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {margin: 0; padding: 0;}
       button {  background-color: transparent;}
@@ -61,10 +61,10 @@
                 <span class="navbar-link1 nav-link" style="cursor:pointer;" onclick="location.href='map/'">Treasure-Map</span>
                 <span class="nav-link" style="cursor:pointer;" onclick="location.href='map/gallery.html'">Gallery</span>
                 <span class="nav-link" style="cursor:pointer;" onclick="window.open('https://open.spotify.com/playlist/1ahsi2EsGFoBi4s39nUjcW');">Spotify</span>
-                <span class="nav-link" style="cursor:not-allowed;">Discord</span>
+                <span class="nav-link" style="cursor:not-allowed;">Signal x Whatsapp</span>
               </div>
               <div class="home navbar-get-started">
-                <span class="navbar-text10">Home</span>
+                <span class="navbar-text10" onclick="location.href='old/'">Home</span>
               </div>
             </div>
             <div id="open-mobile-menu" class="navbar-hamburger home">
@@ -187,11 +187,12 @@
             </div>
           </div>
         </section>
-        <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
         <footer class="home-footer">
-          <span class="home-text20">SirKnubble © 2024</span>
+          <span class="home-text20">SirKnubble © <script>document.write(new Date().getFullYear())</script></span>
         </footer>
       </div>
     </div>
+    <div class="cursor"></div>
+    <script src="/main.js"></script>
   </body>
 </html>

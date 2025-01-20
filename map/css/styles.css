@@ -48,7 +48,12 @@
 body {
   padding: 0;
   margin: 0;
+  cursor: url("/css/assets/images/cursor.png"), auto;
 }
+
+/* :hover {
+  cursor: url("/css/assets/images/cursor.png"), auto;
+} */
 
 html,
 body,
@@ -58,7 +63,7 @@ body,
 }
 
 .gallery {
-  background-image: url(../../css/cat.png);
+  background-image: url("/css/assets/images/cat.png");
   background-color:#372788;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -76,3 +81,20 @@ body,
   text-align:    center;
   cursor: pointer;
   }
+
+  .cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #eee;
+    left: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: width 1000ms, height 1000ms;
+}
+
+.cursor.large {
+    height: 50px;
+    width: 50px;
+}

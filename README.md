@@ -9,6 +9,8 @@ sirknubble.github.io
 |
 +---js
 |
++---old
+|
 +---map
 |   |
 |   +---css
@@ -24,7 +26,7 @@ sirknubble.github.io
 +---node_modules
 |   \---blueimp-gallery
 |
-\---random
+\---projects
 
 ```
 ### ToDo:

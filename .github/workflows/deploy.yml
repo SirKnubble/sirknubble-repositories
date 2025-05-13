@@ -21,12 +21,26 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install dependencies /map
+        run: |
+          cd map
+          npm install
+          
+      - name: Build /map
+        run: |
+          cd map
+          npm run build
 
-      - name: Build site
-        run: npm run build
-
+      - name: Install dependencies /projects/util/r-place/map
+        run: |
+          cd projects/util/r-place/map
+          npm install
+          
+      - name: Build /projects/util/r-place/map
+        run: |
+          cd projects/util/r-place/map
+          npm run build
+        
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:

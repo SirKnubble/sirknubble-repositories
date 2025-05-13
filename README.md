@@ -6,28 +6,29 @@
 sirknubble.github.io
 |
 +---css
-|
-+---js
-|
-+---old
-|
+|   \---assets
+|       +---fonts
+|       \---images
++---dist
+|   \---assets
 +---map
-|   |
 |   +---css
-|   |
 |   +---geojson
-|   |
 |   +---icons
-|   |
 |   \---images
-|       |
 |       \---treasure
-|
-+---node_modules
-|   \---blueimp-gallery
-|
++---old
+|   \---js
 \---projects
-
+    \---util
+        +---algorithms
+        +---r-place
+        |   +---liste
+        |   \---map
+        \---ui
+            +---fonts
+            +---js
+            \---style
 ```
 ### ToDo:
 
